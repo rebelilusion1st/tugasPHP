@@ -48,6 +48,7 @@ if (isset($_GET["hapus"])) {
     <div class="container">
         <h1 class="mt-5">Anggota Lab Software Engineer <b>UNPI</b></h1>
         <h4>Tugas CRUD by Muhammad Muslim Abdul Jabbaar</h4>
+        <h4>PHP & Bootstrap 5</h4>
         <table class="table table-striped">
             <thead>
                 <tr>

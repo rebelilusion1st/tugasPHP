@@ -26,7 +26,7 @@ require 'functions.php';
 
 <body>
 
-    <div class="container-sm mt-5 ms-auto">
+    <div class="container-sm mt-5 ms-auto mb-5">
 
         <h1>Tambah data mahasiswa</h1>
         <form action="" method="post">
