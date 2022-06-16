@@ -50,3 +50,8 @@ function ubah($data)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function cari($keyword) {
+    $query = "SELECT * FROM laboratorium WHERE nama LIKE '%$keyword%' OR semester LIKE '%$keyword%' OR nohp LIKE '%$keyword%'";
+    return query($query);
+}

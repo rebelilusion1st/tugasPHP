@@ -5,20 +5,9 @@ $id = $_GET['id'];
 
 $ang = query("SELECT * FROM laboratorium WHERE id = $id")[0];
 
-if (isset($_POST["submit"])) {
-    if (ubah($_POST) > 0) {
-        echo "
-        <script>
-            alert('data berhasil diubah!');
-            document.location.href = 'index.php';
-        </script>";
-    } else {
-        echo "
-        <script>
-            alert('data gagal diubah!');
-            document.location.href = 'index.php';
-        </script>";
-    }
+if (!isset($_GET["id"])) {
+    // header("Location: index.php");
+    echo "error";
 }
 
 ?>
@@ -39,6 +28,7 @@ if (isset($_POST["submit"])) {
             margin-top: 20px;
             /* border: 1px solid; */
         }
+
         form {
             max-width: 540px;
         }

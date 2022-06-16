@@ -15,6 +15,10 @@ if (isset($_GET["hapus"])) {
     }
 }
 
+if(isset($_POST["cari"])) {
+    $anggota = cari($_POST["keyword"]);
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,12 +37,21 @@ if (isset($_GET["hapus"])) {
         }
 
         table {
-            margin-top: 50px;
+            margin-top: 20px;
             border: 1px solid black;
         }
 
         .tombol {
             float: left;
+        }
+
+        .cari {
+            margin-top: 30px;
+        }
+
+        .kolom-pencarian {
+            max-width: 400px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -49,6 +62,12 @@ if (isset($_GET["hapus"])) {
         <h1 class="mt-5">Anggota Lab Software Engineer <b>UNPI</b></h1>
         <h4>Tugas CRUD by Muhammad Muslim Abdul Jabbaar</h4>
         <h4>PHP & Bootstrap 5</h4>
+        <div class="cari">
+            <form action="" method="post">
+                <input type="text" name="keyword" class="form-control kolom-pencarian">
+                <button type="submit" class="btn btn-primary tombol-cari" name="cari">Cari</button>
+            </form>
+        </div>
         <table class="table table-striped">
             <thead>
                 <tr>
